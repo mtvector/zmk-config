@@ -4,7 +4,7 @@ name: Choctopus44v1
 type: shield
 url: https://github.com/mtvector/choctopus44-zmk-config
 requires:
-  - nice_nano_v2
+  - pro_micro
 features:
   - keys
   - encoder
