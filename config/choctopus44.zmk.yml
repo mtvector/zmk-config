@@ -1,0 +1,10 @@
+file_format: "1"
+id: choctopus44
+name: Choctopus44v1
+type: shield
+url: https://github.com/mtvector/choctopus44-zmk-config
+requires:
+  - pro_micro
+features:
+  - keys
+  - encoder
