@@ -9,11 +9,11 @@
 #include <dt-bindings/zmk/keys.h>
 
 &mt {
-    tapping-term-ms = <200>;
-    retro-tap;
+    tapping-term-ms = <400>;
     hold-while-undecided;
     flavor = "tap-preferred";
     hold-while-undecided-linger;
+    bindings = <&kp>, <&kp>;
 };
 
 / {
