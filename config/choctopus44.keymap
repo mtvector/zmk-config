@@ -9,10 +9,11 @@
 #include <dt-bindings/zmk/keys.h>
 
 &mt {
-    tapping-term-ms = <300>;
+    tapping-term-ms = <200>;
     retro-tap;
     hold-while-undecided;
-    flavor = "balanced";
+    flavor = "tap-preferred";
+    hold-while-undecided-linger;
 };
 
 / {
@@ -41,13 +42,13 @@
 
         default_layer {
             bindings = <
-&kp ESC          &kp Q           &kp W           &kp E            &lt 2 R           &kp T         &kp Y    &lt 2 U            &kp I        &kp O            &kp P               &kp BACKSLASH
-&kp TAB          &mt LEFT_WIN A  &mt LEFT_ALT S  &mt LCTRL D      &mt LEFT_SHIFT F  &lt 1 G       &lt 1 H  &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMI  &kp SQT
-&kp EXCLAMATION  &kp Z           &kp X           &kp C            &kp V             &kp B         &kp N    &kp M              &kp COMMA    &kp PERIOD       &kp QUESTION        &kp FSLH
-                 &kp F1          &tog 1          &mt UNDER SPACE  &kp LSHFT                              &kp ENTER          &shift_del   &tog 2           &kp F2
+&kp ESC          &kp Q           &kp W           &kp E            &lt 2 R           &kp T      &kp Y    &lt 2 U            &kp I        &kp O            &kp P               &kp BACKSLASH
+&kp TAB          &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D      &mt LEFT_SHIFT F  &lt 1 G    &lt 1 H  &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMI  &kp SQT
+&kp EXCLAMATION  &kp Z           &kp X           &kp C            &kp V             &kp B      &kp N    &kp M              &kp COMMA    &kp PERIOD       &kp QUESTION        &kp FSLH
+                 &kp F1          &tog 1          &mt UNDER SPACE  &kp LSHFT                             &kp ENTER          &shift_del   &tog 2           &kp F2
             >;
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
 
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
         };
 
         lower_layer {
@@ -57,8 +58,8 @@
 &to 0       &kp N0     &kp N1  &kp N2           &kp N3     &kp MINUS     &kp COMMA  &kp HOME        &kp PAGE_DOWN   &kp END    &kp PAGE_UP  &kp F12
             &kp F1     &tog 1  &mt UNDER SPACE  &kp LSHFT                           &kp ENTER       &shift_del      &tog 2     &kp F2
             >;
-//            sensor-bindings = <&inc_dec_kp UP DOWN>;
 
+            //            sensor-bindings = <&inc_dec_kp UP DOWN>;
         };
 
         raise_layer {
@@ -69,8 +70,7 @@
             &kp F1     &tog 1       &mt SPACE UNDER       &kp LSHFT                                  &kp ENTER          &shift_del             &tog 2                &kp F2
             >;
 
-//            sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
-
+            //            sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
         };
 
         adjust_layer {
@@ -81,7 +81,16 @@
               &none         &to 0         &kp SPACE     &kp LEFT_SHIFT                        &kp ENTER  &shift_del    &to 0      &trans
             >;
 
-//            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            //            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        double_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
