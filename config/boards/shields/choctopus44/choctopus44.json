@@ -55,5 +55,5 @@
       ]
     }
   },
-  "sensors": []
+  "sensors": ["middle_encoder"]
 }
