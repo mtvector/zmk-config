@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 &mt {
     tapping-term-ms = <300>;
@@ -44,6 +45,11 @@
         tobt {
             bindings = <&to 3>;
             key-positions = <0 24>;
+        };
+
+        to4 {
+            bindings = <&to 4>;
+            key-positions = <28 31>;
         };
     };
 
@@ -102,11 +108,13 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans    &trans  &trans
+        &trans  &trans  &trans  &trans                    &mkp MB2  &mkp MB1  &mkp MB3  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
     };
 
