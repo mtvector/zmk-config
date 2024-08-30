@@ -10,12 +10,6 @@
 #include <dt-bindings/zmk/mouse.h>
 
 &mt {
-    tapping-term-ms = <300>;
-    flavor = "tap-preferred";
-    bindings = <&kp>, <&kp>;
-
-    quick-tap-ms = <0>;
-    require-prior-idle-ms = <0>;
 };
 
 / {
@@ -69,10 +63,10 @@
 
         lower_layer {
             bindings = <
-&kp ESCAPE  &kp SLASH  &kp N7  &kp N8             &kp N9     &kp PLUS      &kp F3     &kp F4          &kp UP_ARROW    &kp F5     &kp F6       &kp F7
-&kp CARET   &kp STAR   &kp N4  &kp N5             &kp N6     &kp PERIOD    &kp EQUAL  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp F9       &kp F10
-&to 0       &kp N0     &kp N1  &kp N2             &kp N3     &kp MINUS     &kp COMMA  &kp HOME        &kp PAGE_DOWN   &kp END    &kp PAGE_UP  &kp F12
-            &kp F1     &tog 1  &shift_underscore  &kp LSHFT                           &kp ENTER       &shift_del      &tog 2     &kp F2
+&kp ESCAPE  &kp ASTERISK  &kp N7  &kp N8             &kp N9     &kp PLUS      &kp F3     &kp F4          &kp UP_ARROW    &kp F5     &kp F6       &kp F7
+&kp CARET   &kp N0        &kp N4  &kp N5             &kp N6     &kp PERIOD    &kp EQUAL  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp F9       &kp F10
+&to 0       &kp SLASH     &kp N1  &kp N2             &kp N3     &kp MINUS     &kp COMMA  &kp HOME        &kp PAGE_DOWN   &kp END    &kp PAGE_UP  &kp F12
+            &kp F1        &tog 1  &shift_underscore  &kp LSHFT                           &kp ENTER       &shift_del      &tog 2     &to 3
             >;
 
             //            sensor-bindings = <&inc_dec_kp UP DOWN>;
@@ -85,7 +79,7 @@
 &kp ESCAPE  &trans     &trans          &kp BACKSLASH         &kp SLASH         &kp LS(N9)    &kp EXCL   &kp AMPERSAND      &kp PIPE               &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_VOLUME_UP
 &kp TAB     &kp CARET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp HASH      &kp TILDE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE       &kp MINUS             &kp K_VOLUME_DOWN
 &to 0       &trans     &trans          &kp PERCENT           &kp DOLLAR        &kp UNDER     &kp GRAVE  &kp AT             &kp EQUAL              &trans                &to 3                 &kp C_MUTE
-            &kp F1     &tog 1          &shift_underscore     &kp LSHFT                                  &kp ENTER          &shift_del             &tog 2                &kp F2
+            &kp F1     &tog 1          &shift_underscore     &kp LSHFT                                  &kp ENTER          &shift_del             &tog 2                &to 3
             >;
 
             //            sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
@@ -95,8 +89,8 @@
 
         adjust_layer {
             bindings = <
-&kp ESCAPE    &sys_reset    &trans        &trans             &bootloader     &trans        &none   &none      &kp UP_ARROW  &kp SLCK   &kp PAUSE_BREAK  &none
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4    &bt BT_CLR    &none   &kp LEFT   &kp DOWN      &kp RIGHT  &trans           &none
+&kp ESCAPE    &sys_reset    &bootloader   &trans             &trans          &bt BT_CLR    &none   &none      &kp UP_ARROW  &kp SLCK   &kp PAUSE_BREAK  &none
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4    &trans        &none   &kp LEFT   &kp DOWN      &kp RIGHT  &trans           &none
 &to 0         &none         &none         &none              &none           &none         &trans  &trans     &trans        &trans     &kp END          &kp PG_DN
               &none         &to 0         &shift_underscore  &kp LEFT_SHIFT                        &kp ENTER  &shift_del    &to 0      &trans
             >;
