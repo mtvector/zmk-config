@@ -92,6 +92,54 @@
             bindings = <&caps_word>;
             key-positions = <16 19>;
         };
+
+        F1_combo {
+            bindings = <&kp F1>;
+            key-positions = <1 4>;
+        };
+
+        f2_combo {
+            bindings = <&kp F2>;
+            key-positions = <7 10>;
+        };
+
+        brackets_combos {
+            bindings = <&braces>;
+            key-positions = <31 28>;
+        };
+
+        parentheses_combo {
+            bindings = <&parentheses>;
+            key-positions = <27 32>;
+        };
+
+        braces_combo {
+            bindings = <&braces>;
+            key-positions = <26 33>;
+        };
+    };
+
+    macros {
+        brackets: brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT_ARROW>;
+            label = "BRACKETS";
+        };
+
+        parentheses: parentheses {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT_ARROW>;
+            label = "PARENTHESES";
+        };
+
+        braces: brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT_ARROW>;
+            label = "BRACKETS";
+        };
     };
 
     keymap {
