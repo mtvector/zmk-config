@@ -134,11 +134,11 @@
             label = "PARENTHESES";
         };
 
-        braces: brackets {
+        braces: braces {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT_ARROW>;
-            label = "BRACKETS";
+            label = "BRACES";
         };
     };
 
