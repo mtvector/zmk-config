@@ -104,7 +104,7 @@
         };
 
         brackets_combos {
-            bindings = <&braces>;
+            bindings = <&brackets>;
             key-positions = <31 28>;
         };
 
