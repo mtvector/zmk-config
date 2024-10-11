@@ -22,3 +22,6 @@ include:
     shield: choctopus44
   - board: nice_nano_v2
     shield: settings_reset
+  - board: seeeduino_xiao_ble
+    shield: regret
+
