@@ -165,8 +165,8 @@
 
         layer_1 {
             bindings = <
-&kp ASTRK          &kp N7           &kp N8        &kp N9        &kp PLUS    &kp F3     &kp F4          &kp UP_ARROW  &kp F5     &kp F7
-&mt LGUI N0        &mt LEFT_ALT N4  &mt LCTRL N5  &mt LSHFT N6  &kp PERIOD  &kp EQUAL  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp F10
+&kp ASTRK          &kp N7           &kp N8        &kp N9        &kp PLUS    &kp F3     &kp F4          &kp UP_ARROW  &kp F5     &kp F6
+&mt LGUI N0        &mt LEFT_ALT N4  &mt LCTRL N5  &mt LSHFT N6  &kp PERIOD  &kp EQUAL  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp F9
 &kp FSLH           &kp N1           &kp N2        &kp N3        &kp MINUS   &kp COMMA  &kp HOME        &kp PG_DN     &kp END    &kp PG_UP
 &shift_underscore  &to 0            &kp ENTER     &shift_del
             >;
