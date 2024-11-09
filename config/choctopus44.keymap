@@ -38,6 +38,15 @@
 
             tapping-term-ms = <400>;
         };
+
+        colon_semicolon: colon_semicolon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COLON_SEMICOLON";
+            bindings = <&kp COLON>, <&kp SEMI>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     combos {
@@ -147,9 +156,9 @@
 
         default_layer {
             bindings = <
-&kp ESC          &kp Q           &kp W           &kp E              &kp R             &kp T      &kp Y    &kp U              &kp I        &kp O            &kp P               &kp BACKSLASH
-&kp TAB          &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D        &mt LEFT_SHIFT F  &lt 2 G    &lt 2 H  &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMI  &kp SQT
-&kp EXCLAMATION  &kp Z           &kp X           &kp C              &lt 1 V           &kp B      &kp N    &lt 1 M            &kp COMMA    &kp PERIOD       &kp SLASH           &kp TILDE
+&kp ESC          &kp Q           &kp W           &kp E              &kp R             &kp T      &kp Y    &kp U              &kp I        &kp O            &kp P             &kp BACKSLASH
+&kp TAB          &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D        &mt LEFT_SHIFT F  &lt 2 G    &lt 2 H  &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &colon_semicolon  &kp SQT
+&kp EXCLAMATION  &kp Z           &kp X           &kp C              &lt 1 V           &kp B      &kp N    &lt 1 M            &kp COMMA    &kp PERIOD       &kp SLASH         &kp TILDE
                  &kp F1          &tog 1          &shift_underscore  &layer_dance                          &kp ENTER          &shift_del   &tog 2           &kp LEFT_GUI
             >;
 
