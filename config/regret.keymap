@@ -156,10 +156,10 @@
         colon_semicolon_rgui: colon_semicolon_rgui {
             compatible = "zmk,behavior-hold-tap";
             label = "COLON_SEMICOLON_RGUI";
-            bindings = <&mt>, <&colon_semicolon>;
+            bindings = <&kp>, <&colon_semicolon>;
 
             #binding-cells = <2>;
-            hold-trigger-key-positions = <19>;
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
         };
     };
