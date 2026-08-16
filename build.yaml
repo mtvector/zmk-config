@@ -18,10 +18,10 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  # Zephyr 4.1 represents the nice!nano v2 as revision 2.0.0 of nice_nano.
+  - board: nice_nano@2.0.0//zmk
     shield: choctopus44
-  - board: nice_nano_v2
+  - board: nice_nano@2.0.0//zmk
     shield: settings_reset
-  - board: xiao_ble/nrf52840/zmk
+  - board: xiao_ble//zmk
     shield: regret
-
