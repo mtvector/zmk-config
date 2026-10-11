@@ -139,7 +139,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_DANCE";
             #binding-cells = <0>;
-            bindings = <&to 1>, <&to 2>, <&to 3>;
+            bindings = <&to 1>, <&to 2>, <&to 3>, <&to 0>;
 
             tapping-term-ms = <400>;
         };
@@ -206,6 +206,15 @@
 &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_SPD
 &trans             &trans        &trans        &trans        &trans        &trans           &trans           &trans           &trans           &trans
 &shift_underscore  &to 0         &kp ENTER     &shift_del
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&kp Q        &kp W      &kp E      &kp R  &kp T    &kp Y    &kp U        &kp I        &kp O       &kp P
+&kp A        &kp S      &kp D      &kp F  &lt 1 G  &lt 2 H  &mt RSHFT J  &mt RCTRL K  &mt RALT L  &colon_semicolon_rgui RGUI 0
+&kp Z        &kp X      &kp C      &kp V  &kp B    &kp N    &lt 1 M      &kp COMMA    &kp DOT     &kp FSLH
+&lt 1 SPACE  &kp LSHFT  &kp LCTRL  &to 0
             >;
         };
     };
