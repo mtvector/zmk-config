@@ -139,7 +139,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_DANCE";
             #binding-cells = <0>;
-            bindings = <&to 1>, <&to 2>, <&to 3>, <&to 0>;
+            bindings = <&to 1>, <&to 2>, <&to 3>, <&to 4>;
 
             tapping-term-ms = <400>;
         };
